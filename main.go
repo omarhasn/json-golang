@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+// auto generated json-struct using  http://json2struct.mervine.net
 type MyjsonData struct {
 	Alt        string `json:"alt"`
 	Day        string `json:"day"`
@@ -24,8 +25,6 @@ type MyjsonData struct {
 func main() {
 
 	data := MyjsonData{}
-
-	//r obj map[string]interface{}
 
 	resp, _ := http.Get("https://xkcd.com/571/info.0.json")
 	bs, _ := ioutil.ReadAll(resp.Body)
